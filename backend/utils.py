@@ -104,6 +104,17 @@ def read_problem_info(problem_path: str) -> dict:
                 
     return info
 
+problem_pool = [
+        ("latam2020", "N"),
+        ("latam2023", "B"),
+        ("latam2023", "D"),
+        #("latam2022", "D"),
+        #("latam2020", "D"),
+        #("latam2022", "I"),
+        ("latam2021", "K"),
+        #("latam2024", "F"),
+    ]
+
 def get_random_problems(num_problems: int = 5) -> list:
     """Get random problems from Contests directory."""
     contests_dir = "Contests"
@@ -120,16 +131,7 @@ def get_random_problems(num_problems: int = 5) -> list:
                     if os.path.exists(os.path.join(problem_path, "description", "problem.info")):
                         all_problems.append((contest, problem))
     
-    problem_pool = [
-        #("latam2020", "N"),
-        #("latam2023", "B"),
-        #("latam2023", "D"),
-        ("latam2022", "D"),
-        ("latam2022", "I"),
-        ("latam2021", "F"),
-        ("latam2021", "K"),
-        ("latam2024", "F"),
-    ]
+    
 
     all_problems = problem_pool
 

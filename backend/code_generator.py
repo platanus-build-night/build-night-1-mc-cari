@@ -3,6 +3,8 @@ import httpx
 import logging
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
+from typing import Dict, Any
 from .generator import CodeGenerator
 from .dumb_generator import DumbCodeGenerator
 from .models import Verdict, CodeGenerationRequest, CodeGenerationResponse, VerdictStatus
