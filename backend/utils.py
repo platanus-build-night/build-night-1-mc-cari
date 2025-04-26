@@ -108,8 +108,8 @@ problem_pool = [
         ("latam2020", "N"),
         ("latam2023", "B"),
         ("latam2023", "D"),
-        #("latam2022", "D"),
-        #("latam2020", "D"),
+        ("latam2022", "D"),
+        ("latam2020", "D"),
         #("latam2022", "I"),
         ("latam2021", "K"),
         #("latam2024", "F"),
@@ -131,8 +131,7 @@ def get_random_problems(num_problems: int = 5) -> list:
                     if os.path.exists(os.path.join(problem_path, "description", "problem.info")):
                         all_problems.append((contest, problem))
     
-    
-
+    # Use only problems in problem_pool, since they are the easiest
     all_problems = problem_pool
 
 

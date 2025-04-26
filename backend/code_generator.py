@@ -45,6 +45,7 @@ async def handle_code_generation(request: CodeGenerationRequest) -> CodeGenerati
         logger.info("Generating code...")
         result = generator.generate_code(request.problem_id)
         logger.info("Code generation completed")
+        logger.info(f"Code: {result.code}")
         
         # Submit code to localhost:8000 with retries
         logger.info("Submitting code...")

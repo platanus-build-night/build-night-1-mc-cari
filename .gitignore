@@ -3,6 +3,8 @@ Contests/*
 
 .env
 
+backend/__pycache__/*
+
 
 frontend/node_modules/
 frontend/.next/
